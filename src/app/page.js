@@ -1,11 +1,6 @@
-// app/page.tsx
 'use client';
-import { Link } from '@chakra-ui/next-js';
+import NavBar from '@/components/NavBar';
 
 export default function Page() {
-  return (
-    <Link href="/me" color="blue.400" _hover={{ color: 'blue.500' }}>
-      Me
-    </Link>
-  );
+  return <NavBar></NavBar>;
 }
