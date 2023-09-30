@@ -1,0 +1,23 @@
+.tag {
+  margin: 5px;
+  padding: 10px;
+  background-color: var(--bg);
+  cursor: pointer;
+  border-color: var(--textColor);
+  border-radius: 10px;
+  border: none;
+  border: solid;
+  border-width: 1px;
+}
+
+.text {
+  color:  var(--textColor);
+}
+
+.tag.selected {
+  background-color: var(--softBg);
+}
+
+.text.selected {
+  color: var(--softTextColor);
+}

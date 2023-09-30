@@ -1,3 +1,9 @@
+import SearchBar from '@/components/searchBar/SearchBar';
+
 export default function Page() {
-  return <div></div>;
+  return (
+    <div>
+      <SearchBar />
+    </div>
+  );
 }
