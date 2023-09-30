@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import styles from './navbar.module.css';
 import Login from '../login/Login';
+import ThemeToggle from '../themeToggle/ThemeToggle';
 
 export default function Navbar() {
   return (
@@ -13,6 +14,7 @@ export default function Navbar() {
         <Image src="/instagram.png" alt="instagram" width={24} height={24} />
       </div>
       <div className={styles.links}>
+        <ThemeToggle />
         <Link href="/" className={styles.link}>
           Home
         </Link>
