@@ -1,5 +1,8 @@
 import './globals.css';
 
+import Footer from '@/components/footer/Footer';
+import NavBar from '@/components/navbar/NavBar';
+
 export const metadata = {
   title: 'Lazilearning',
 };
@@ -7,7 +10,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="container">
+          <div className="wrapper">
+            <NavBar />
+            {children}
+            <Footer />
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
