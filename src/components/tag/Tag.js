@@ -1,5 +1,3 @@
-'use client';
-
 import styles from './tag.module.css';
 
 export default function Tag({ tag, onClick }) {
