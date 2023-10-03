@@ -4,14 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "submodule": "cd note-markdowns-crawl && (npm list cheerio || npm i --save)",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+    "next": "^13.5.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "swr": "^2.2.4"
   },
   "devDependencies": {
     "eslint-plugin-react": "^7.33.2"

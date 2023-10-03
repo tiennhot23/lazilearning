@@ -1,0 +1,10 @@
+{
+  "posts": [
+    {
+      "image": "https://i.pinimg.com/originals/9c/8c/a5/9c8ca502528fedd93c8e0c5bb41701af.jpg",
+      "tags": ["Golang", "Javascript"],
+      "title": "Title of the post",
+      "createdAt": "2023-09-23"
+    }
+  ]
+}

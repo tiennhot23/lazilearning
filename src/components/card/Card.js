@@ -29,10 +29,6 @@ export default function Card({ post }) {
             </span>
           ))}
         </div>
-        <p className={styles.desc}>
-          {post.desc.substring(0, 200)}
-          {post.desc.length > 200 ? '...' : ''}
-        </p>
         <Link href={`/post/${post.slug}`} className={styles.link}>
           Read More
         </Link>
