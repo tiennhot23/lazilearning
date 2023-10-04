@@ -16,20 +16,22 @@ export default function Card({ post }) {
         />
       )}
       <div className={styles.textContainer}>
-        <Link href={`/post/${post.slug}`}>
+        <Link href={`/post/${post.id}`}>
           <h1>{post.title}</h1>
         </Link>
         <div className={styles.detail}>
-          <span className={styles.date}>
-            {post.createdAt?.substring(0, 10)} -{' '}
-          </span>
+          {post.createdAt && (
+            <span className={styles.date}>
+              {post.createdAt.substring(0, 10)} -{' '}
+            </span>
+          )}
           {post.tags.map(tag => (
             <span className={styles.tag} key={tag}>
               {tag}
             </span>
           ))}
         </div>
-        <Link href={`/post/${post.slug}`} className={styles.link}>
+        <Link href={`/post/${post.id}`} className={styles.link}>
           Read More
         </Link>
       </div>
