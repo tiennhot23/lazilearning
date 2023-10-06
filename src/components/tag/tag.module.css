@@ -11,7 +11,7 @@
 }
 
 .text {
-  color:  var(--textColor);
+  color: var(--textColor);
 }
 
 .tag.selected {

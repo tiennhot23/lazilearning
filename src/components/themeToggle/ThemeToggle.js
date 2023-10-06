@@ -15,7 +15,7 @@ const ThemeToggle = () => {
       onClick={toggle}
       style={
         theme === 'dark'
-          ? { backgroundColor: 'white' }
+          ? { backgroundColor: 'whitesmoke' }
           : { backgroundColor: '#0f172a' }
       }
     >

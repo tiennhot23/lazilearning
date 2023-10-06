@@ -7,14 +7,19 @@ import Card from '../card/Card';
 
 const fetcher = url => fetch(url).then(res => res.json());
 
-export default function CardList() {
-  const { data, isLoading } = useSWR('/api/githubdata', fetcher);
+let shouldReload = true;
+
+export default function CardList({ query }) {
+  const { data: posts, isLoading } = useSWR(
+    `/api/posts?q=${query}&shouldReload=${shouldReload}`,
+    fetcher
+  );
 
   if (isLoading) return <div>Loading...</div>;
 
   return (
     <div className={styles.cards}>
-      {data.posts?.map((post, index) => (
+      {posts?.map((post, index) => (
         <Card post={post} key={index} />
       ))}
     </div>

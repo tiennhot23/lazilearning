@@ -16,6 +16,7 @@
   height: auto;
   width: 500px;
   background-color: var(--bg);
+  color: var(--textColor);
 }
 
 .searchBar:focus {

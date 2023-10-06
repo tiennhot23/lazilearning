@@ -3,28 +3,24 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import styles from './navbar.module.css';
-import Login from '../login/Login';
 import ThemeToggle from '../themeToggle/ThemeToggle';
 
 export default function Navbar() {
   return (
     <div className={styles.container}>
       <div className={styles.social}>
-        <Image src="/facebook.png" alt="facebook" width={24} height={24} />
-        <Image src="/instagram.png" alt="instagram" width={24} height={24} />
+        <Image
+          src="https://avatars.githubusercontent.com/u/119950866?v=4"
+          alt="github"
+          width={50}
+          height={50}
+        />
+        <Link href="/" className={styles.logo}>
+          Lazidog
+        </Link>
       </div>
       <div className={styles.links}>
         <ThemeToggle />
-        <Link href="/" className={styles.link}>
-          Home
-        </Link>
-        <Link href="/" className={styles.link}>
-          Contact
-        </Link>
-        <Link href="/" className={styles.link}>
-          About
-        </Link>
-        <Login />
       </div>
     </div>
   );
