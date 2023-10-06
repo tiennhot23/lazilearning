@@ -79,7 +79,7 @@ async function newCommitAvailable(latestCommitDate) {
     : undefined;
 }
 
-async function readStructure() {
+export async function readStructure() {
   const data = await fs.readFile(structureFilename, 'utf8');
   return JSON.parse(data);
 }

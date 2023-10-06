@@ -11,7 +11,7 @@ export default function PostDetail({ id, url }) {
   if (isLoading) return <div>Loading...</div>;
 
   return (
-    <div className={styles.post}>
+    <div className={styles.container}>
       <div className={styles.wrapper}>
         <img className={styles.img} src={data.image} alt="" />
         <h1 className={styles.title}>{data.title}</h1>
@@ -27,8 +27,8 @@ export default function PostDetail({ id, url }) {
           </span>
         </div>
         <div
-          className="singlePostDesc"
-          dangerouslySetInnerHTML={{ __html: data.sanitizedHtml }}
+          className={styles.body}
+          dangerouslySetInnerHTML={{ __html: data.html }}
         />
       </div>
     </div>

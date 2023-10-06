@@ -1,5 +1,6 @@
 .container {
-  width: 80%;
+  width: 90%;
+  line-height: 3;
 }
 
 .wrapper {
@@ -28,4 +29,33 @@
   font-size: 16px;
   font-family: 'Varela Round', sans-serif;
   color: #b39656;
+}
+
+.body {
+  color: #666;
+  font-size: 18px;
+  line-height: 35px;
+}
+
+.body::first-letter {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.body * {
+  margin-bottom: 10px;
+}
+
+.body h1 {
+  margin-bottom: 30px;
+}
+
+.body pre {
+  line-height: 1.2em;
+  background: #ccc;
+
+  padding: 20px;
+  text-align: justify;
+  font-family: calibri, arial, sans-serif;
+  overflow-x: scroll;
 }
