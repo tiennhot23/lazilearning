@@ -17,7 +17,6 @@ function formatData(data, category = 'Common') {
   return data.map((e, i) => {
     const img = e.name.slice(e.name.indexOf('[') + 1, e.name.indexOf(']'));
     return {
-      id: i,
       title: e.name.slice(e.name.indexOf(']') + 2, e.name.indexOf('.')),
       path: `https://raw.githubusercontent.com/lazidog/note-markdowns/main/${e.path}`,
       category: category,
@@ -45,7 +44,12 @@ async function updateRepoStructure() {
       data.push(...formatData(subFiles, dir.name));
     })
   );
-  return data;
+  return data.map((e, i) => {
+    return {
+      id: i,
+      ...e,
+    };
+  });
 }
 
 async function getLatestCommitDate() {

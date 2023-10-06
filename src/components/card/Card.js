@@ -16,7 +16,14 @@ export default function Card({ post }) {
         />
       )}
       <div className={styles.textContainer}>
-        <Link href={`/post/${post.id}`}>
+        <Link
+          href={{
+            pathname: `/post/${post.id}`,
+            query: {
+              url: post.path,
+            },
+          }}
+        >
           <h1>{post.title}</h1>
         </Link>
         <div className={styles.detail}>
@@ -31,7 +38,15 @@ export default function Card({ post }) {
             </span>
           ))}
         </div>
-        <Link href={`/post/${post.id}`} className={styles.link}>
+        <Link
+          href={{
+            pathname: `/post/${post.id}`,
+            query: {
+              url: post.path,
+            },
+          }}
+          className={styles.link}
+        >
           Read More
         </Link>
       </div>

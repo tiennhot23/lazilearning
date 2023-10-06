@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "submodule": "cd note-markdowns-crawl && (npm list cheerio || npm i --save)",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
+    "dompurify": "^3.0.6",
+    "jsdom": "^22.1.0",
+    "marked": "^9.1.0",
     "next": "^13.5.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
