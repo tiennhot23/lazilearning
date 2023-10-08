@@ -10,7 +10,8 @@ export default function Navbar() {
     <div className={styles.container}>
       <div className={styles.social}>
         <Image
-          src="https://avatars.githubusercontent.com/u/119950866?v=4"
+          style={{ borderRadius: '50%' }}
+          src="/lazidog.jpg"
           alt="github"
           width={50}
           height={50}

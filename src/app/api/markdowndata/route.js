@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
-import matter from 'gray-matter';
-import { marked } from 'marked';
+import showdown from 'showdown';
 
 import { readStructure } from '@/modules/getRepoStructure';
+
+const converter = new showdown.Converter();
 
 export async function GET(req) {
   const data = await readStructure();
@@ -11,7 +12,6 @@ export async function GET(req) {
   if (!post) return {};
 
   const markdown = await fetch(post.path).then(res => res.text());
-  const { content } = matter(markdown);
-  post.html = marked(content);
+  post.html = converter.makeHtml(markdown);
   return NextResponse.json(post);
 }

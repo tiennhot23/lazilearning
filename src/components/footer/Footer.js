@@ -8,9 +8,16 @@ export default function Footer() {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.logo}>
-          <Image src="/logo.ico" width={50} height={50} />
+          <Image
+            style={{ borderRadius: '50%' }}
+            src="/lazidog.jpg"
+            alt="github"
+            width={50}
+            height={50}
+          />
           <h1 className={styles.logoText}>Lazilearning</h1>
         </div>
+        <br />
         <p className={styles.desc}>Developed by a lazy dog</p>
       </div>
     </div>
