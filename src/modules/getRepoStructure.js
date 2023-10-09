@@ -90,12 +90,12 @@ async function writeStructure(repoStructure) {
 
 async function getRepoStructure() {
   const repoStructure = await readStructure();
-  const newLatestCommitDate = await newCommitAvailable(repoStructure.date);
-  if (newLatestCommitDate) {
-    repoStructure.date = newLatestCommitDate;
-    repoStructure.posts = await updateRepoStructure();
-    await writeStructure(repoStructure);
-  }
+  // const newLatestCommitDate = await newCommitAvailable(repoStructure.date);
+  // if (newLatestCommitDate) {
+  //   repoStructure.date = newLatestCommitDate;
+  //   repoStructure.posts = await updateRepoStructure();
+  //   await writeStructure(repoStructure);
+  // }
   return repoStructure;
 }
 

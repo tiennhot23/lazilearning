@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import styles from './navbar.module.css';
-import ThemeToggle from '../themeToggle/ThemeToggle';
 
 export default function Navbar() {
   return (
@@ -17,12 +16,10 @@ export default function Navbar() {
           height={50}
         />
         <Link href="/" className={styles.logo}>
-          Lazidog
+          Lazilearning
         </Link>
       </div>
-      <div className={styles.links}>
-        <ThemeToggle />
-      </div>
+      <div className={styles.links}></div>
     </div>
   );
 }
