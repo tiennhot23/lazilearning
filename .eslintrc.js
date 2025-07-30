@@ -58,7 +58,6 @@ module.exports = {
     'react/prop-types': 'off',
     'react/destructuring-assignment': 'off',
     'import/prefer-default-export': 'off',
-    'no-console': ['error', { allow: ['time', 'timeEnd', 'timeLog'] }],
     'arrow-parens': ['error', 'as-needed'],
     'import/extensions': [0, { js: 'always' }],
 
