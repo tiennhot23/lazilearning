@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "https://digdig-admin-server-204026641998.asia-northeast1.run.app/api/crons/schedule-notification",
+      "schedule": "*/5 * * * *"
+    }
+  ]
+}
